@@ -1,0 +1,580 @@
+{
+  "repository": "lab-07-access-review-and-audit",
+  "status": "Client review",
+  "source": {
+    "title": "Hands-On IAM Labs - Lab 7: Access Review and Audit",
+    "author": "Andrew",
+    "organization": "All Things Identity",
+    "guide_version": "V8",
+    "screens_captured_on": "Authentik 2026.8.5, Grafana 11.6.0, WordPress with miniOrange SAML and OrangeHRM 5.8.1, November 2026",
+    "file_name": "second.pdf",
+    "pages": 41,
+    "figures_in_source": 43,
+    "sha256": "0758aad47ebba03520c1b99dc2673607b37adf2360bb61b51a59c5609d482360"
+  },
+  "evidence_scope": "All screenshots are the guide author's example screenshots. Names, counts and values in them are examples from the guide's environment. Results are source-demonstrated or expected; personal completion of the lab by the portfolio owner is not verified. No completed inventory, certification decisions, findings or API exports are included.",
+  "not_included": [
+    "Completed entitlement inventory",
+    "Certification decisions, reviewer names or approvals",
+    "Ranked findings or severity ratings from the owner's environment",
+    "API exports (users.json, groups.json, applications.json, events.json, bindings.json)",
+    "The full Grafana role attribute path (clipped in Figure 7.11)"
+  ],
+  "redactions_applied": [],
+  "redaction_summary": "Each selected screenshot was inspected individually for credentials, tokens, private keys, session identifiers and personal information. None was found, so no redaction was applied. Network fields (client IP, location, ISP, ASN, lab host) were already replaced with placeholders by the source author, and the user agent in Figure 7.35 was hidden by the source author. People named in the screenshots are fictional lab accounts.",
+  "screenshots": [
+    {
+      "file": "assets/screenshots/section-01-users-list.png",
+      "source_pdf_page": 4,
+      "figure": "7.2",
+      "source_caption": "Directory > Users holds every account, active or not, so this is where your population comes from.",
+      "dimensions_px": [
+        950,
+        593
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Fictional lab accounts and their last-login times. No credentials. No redaction required.",
+      "sha256": "ba80a0658a1253f36a4c6da29d39c2a3c4314d4b10fba0ffa1804a0a6d2e3dad"
+    },
+    {
+      "file": "assets/screenshots/section-01-users-inactive.png",
+      "source_pdf_page": 5,
+      "figure": "7.3",
+      "source_caption": "The bottom of the Users list. Inactive accounts show No under Active, and they still count.",
+      "dimensions_px": [
+        950,
+        996
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Includes an auto-generated outpost service-account username (non-secret identifier). No credentials.",
+      "sha256": "47a22296709b7a2d228b8ef5599630c951fd5a6247e9fcc988c3877b1faf3834"
+    },
+    {
+      "file": "assets/screenshots/section-01-groups-member-counts.png",
+      "source_pdf_page": 6,
+      "figure": "7.5",
+      "source_caption": "Each group with its member count. These numbers become rows in your inventory.",
+      "dimensions_px": [
+        950,
+        685
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Reviewed individually: fictional lab accounts and company.com/example.com addresses only; client IP, location and similar network fields already masked by the source author (e.g. <client-ip>, <your-location>); no passwords, tokens, private keys or session identifiers.",
+      "sha256": "69b8ac0d5b230b574e09d2d6fdbc09e2c9d1246781fe61d5e3df9bd07663aa8c"
+    },
+    {
+      "file": "assets/screenshots/section-01-applications.png",
+      "source_pdf_page": 7,
+      "figure": "7.7",
+      "source_caption": "Two applications, Grafana and WordPress. Both get reviewed, one row per person each.",
+      "dimensions_px": [
+        950,
+        355
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Reviewed individually: fictional lab accounts and company.com/example.com addresses only; client IP, location and similar network fields already masked by the source author (e.g. <client-ip>, <your-location>); no passwords, tokens, private keys or session identifiers.",
+      "sha256": "40878fbcba060e9086320f01b20c098fb9ac715a2515ac6b25604910b78a3c17"
+    },
+    {
+      "file": "assets/screenshots/section-01-grafana-no-bindings.png",
+      "source_pdf_page": 9,
+      "figure": "7.9",
+      "source_caption": "Grafana has no bindings, so every active account can sign in. Record it as all active accounts.",
+      "dimensions_px": [
+        950,
+        627
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Reviewed individually: fictional lab accounts and company.com/example.com addresses only; client IP, location and similar network fields already masked by the source author (e.g. <client-ip>, <your-location>); no passwords, tokens, private keys or session identifiers.",
+      "sha256": "f3052d777f8918a7222a0e974a86cea6d95ae31db87275c88c71121162605777"
+    },
+    {
+      "file": "assets/screenshots/section-01-wordpress-binding.png",
+      "source_pdf_page": 9,
+      "figure": "7.10",
+      "source_caption": "WordPress is bound to one group, dept-avengers. Only its members get in, and that is who your WordPress rows are.",
+      "dimensions_px": [
+        950,
+        413
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Reviewed individually: fictional lab accounts and company.com/example.com addresses only; client IP, location and similar network fields already masked by the source author (e.g. <client-ip>, <your-location>); no passwords, tokens, private keys or session identifiers.",
+      "sha256": "4a342021df07691358278d5e24aa7e61badc6ecbd02b1bde4cc5cd0ee64cfbaf"
+    },
+    {
+      "file": "assets/screenshots/section-01-grafana-role-path-clipped.png",
+      "source_pdf_page": 10,
+      "figure": "7.11",
+      "source_caption": "Grafana's Role attribute path from Lab 5. Grafana Admins map to Admin and Grafana Editors are checked next. The field is narrow and cuts off the end, so read the full value on your own screen.",
+      "dimensions_px": [
+        950,
+        132
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Shows the start of the Grafana role-mapping expression; the clipped remainder is not reconstructed.",
+      "sha256": "ffce540e49d23613be668c78d12018df45000a43263d653e8502ca82b1c874d6"
+    },
+    {
+      "file": "assets/screenshots/section-01-grafana-effective-roles.png",
+      "source_pdf_page": 10,
+      "figure": "7.12",
+      "source_caption": "Grafana's user list shows the role each person actually landed in. That is your Effective role column.",
+      "dimensions_px": [
+        950,
+        462
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Reviewed individually: fictional lab accounts and company.com/example.com addresses only; client IP, location and similar network fields already masked by the source author (e.g. <client-ip>, <your-location>); no passwords, tokens, private keys or session identifiers.",
+      "sha256": "96c4789b5b09cec1eb17bd8a68b97b1b514d4fd9af8d3b4bf5252515a4808318"
+    },
+    {
+      "file": "assets/screenshots/section-01-wordpress-default-role.png",
+      "source_pdf_page": 11,
+      "figure": "7.13",
+      "source_caption": "Every new SSO account in WordPress gets one default role, Subscriber. There is no per-group mapping, and that is a finding.",
+      "dimensions_px": [
+        950,
+        760
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Reviewed individually: fictional lab accounts and company.com/example.com addresses only; client IP, location and similar network fields already masked by the source author (e.g. <client-ip>, <your-location>); no passwords, tokens, private keys or session identifiers.",
+      "sha256": "f5bc18e7a27e66f52f968d07d55aaaa96753331664d70ec76a768938bc3fe430"
+    },
+    {
+      "file": "assets/screenshots/section-01-wordpress-user-roles.png",
+      "source_pdf_page": 11,
+      "figure": "7.14",
+      "source_caption": "WordPress Users with the Role column. Here everyone except the local admin is Subscriber. Look for anyone else, because a hand-edited role is a grant no group explains.",
+      "dimensions_px": [
+        950,
+        389
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Reviewed individually: fictional lab accounts and company.com/example.com addresses only; client IP, location and similar network fields already masked by the source author (e.g. <client-ip>, <your-location>); no passwords, tokens, private keys or session identifiers.",
+      "sha256": "bb57b105b2746ca27228c5ba1b6965b8d5fd4c1feac8e60641e9ee4b85d8d017"
+    },
+    {
+      "file": "assets/screenshots/section-02-login-events.png",
+      "source_pdf_page": 17,
+      "figure": "7.18",
+      "source_caption": "Login events, newest first, which is how the list opens. Click the Creation Date header to flip the order. The oldest row tells you how far back your evidence goes.",
+      "dimensions_px": [
+        950,
+        826
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Client IP, location and ISP fields already masked by the source author. No credentials.",
+      "sha256": "70c2bbb42f6510350e503b9c2eaa58de6b939134a26e022669236beec994a18d"
+    },
+    {
+      "file": "assets/screenshots/section-02-event-retention.png",
+      "source_pdf_page": 18,
+      "figure": "7.20",
+      "source_caption": "Event retention reads days=365, the default. Older events are deleted, so \"no login\" only means \"none in this window\".",
+      "dimensions_px": [
+        950,
+        135
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Reviewed individually: fictional lab accounts and company.com/example.com addresses only; client IP, location and similar network fields already masked by the source author (e.g. <client-ip>, <your-location>); no passwords, tokens, private keys or session identifiers.",
+      "sha256": "2f1c11d47dfe87b46698b4843b178f322c6b6c45e79d350161bfaa8ade4fc9b9"
+    },
+    {
+      "file": "assets/screenshots/section-02-user-login-history.png",
+      "source_pdf_page": 19,
+      "figure": "7.21",
+      "source_caption": "One person's logins. The newest row is the value for their Last login column.",
+      "dimensions_px": [
+        950,
+        768
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Client IP and location fields already masked by the source author. No credentials.",
+      "sha256": "90407eecca30afeb57aeb5ca18f67b26b71abb0d6d84b8117ea3a1c43253d7ff"
+    },
+    {
+      "file": "assets/screenshots/section-02-last-login-column.png",
+      "source_pdf_page": 19,
+      "figure": "7.22",
+      "source_caption": "The Last login column is a fast cross-check. The event is still your evidence.",
+      "dimensions_px": [
+        950,
+        326
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Reviewed individually: fictional lab accounts and company.com/example.com addresses only; client IP, location and similar network fields already masked by the source author (e.g. <client-ip>, <your-location>); no passwords, tokens, private keys or session identifiers.",
+      "sha256": "3d1c227f48744f66d157e1b31dcb4ce612ba480852dd6ff3515cc99619927dcc"
+    },
+    {
+      "file": "assets/screenshots/section-02-no-login-events.png",
+      "source_pdf_page": 20,
+      "figure": "7.23",
+      "source_caption": "No login events at all for this account. That is a dormant candidate, until you check when it was created.",
+      "dimensions_px": [
+        950,
+        512
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Reviewed individually: fictional lab accounts and company.com/example.com addresses only; client IP, location and similar network fields already masked by the source author (e.g. <client-ip>, <your-location>); no passwords, tokens, private keys or session identifiers.",
+      "sha256": "663e9c19f50040527e7f656b9d09b744ce07d9b0e8aabaec06823768a957f57b"
+    },
+    {
+      "file": "assets/screenshots/section-03-orangehrm-default-list.png",
+      "source_pdf_page": 22,
+      "figure": "7.25",
+      "source_caption": "The default Employee List shows current employees only, 9 records here. Your leaver is not in it.",
+      "dimensions_px": [
+        950,
+        659
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Fictional employee names in the HR demo system. No personal data of real people.",
+      "sha256": "106e110050c8ccc98d3eb00ac55393b6821413473ad32aa52fd2ea45a1247ee0"
+    },
+    {
+      "file": "assets/screenshots/section-03-include-filter.png",
+      "source_pdf_page": 22,
+      "figure": "7.27",
+      "source_caption": "The Include filter up close. This one setting decides whether leavers show up.",
+      "dimensions_px": [
+        600,
+        160
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Reviewed individually: fictional lab accounts and company.com/example.com addresses only; client IP, location and similar network fields already masked by the source author (e.g. <client-ip>, <your-location>); no passwords, tokens, private keys or session identifiers.",
+      "sha256": "9fcf1dd778252f237d017819ac5644b04bee63c293f97d76113e75cdb1491ee8"
+    },
+    {
+      "file": "assets/screenshots/section-03-current-and-past-employees.png",
+      "source_pdf_page": 23,
+      "figure": "7.28",
+      "source_caption": "After Search the count goes from 9 to 11, and past employees carry (Past Employee) after the last name. Jessica Jones is visible here; scroll down on your screen for the rest.",
+      "dimensions_px": [
+        950,
+        702
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Fictional employee names in the HR demo system. No personal data of real people.",
+      "sha256": "28038ed91d6fc3f4781c5c6cd663139189e8b79bccce3fc16a5aa5265450c70c"
+    },
+    {
+      "file": "assets/screenshots/section-03-leaver-active.png",
+      "source_pdf_page": 24,
+      "figure": "7.29",
+      "source_caption": "Your Lab 1 leaver is active again, because Lab 6's Ticket 2 turned the account back on. Here that is martin.li; yours may be named differently.",
+      "dimensions_px": [
+        950,
+        824
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Reviewed individually: fictional lab accounts and company.com/example.com addresses only; client IP, location and similar network fields already masked by the source author (e.g. <client-ip>, <your-location>); no passwords, tokens, private keys or session identifiers.",
+      "sha256": "1810afa9e6008fd62a19f65450de7823d89aede77bb6a0f8a458bf1972cd2ff8"
+    },
+    {
+      "file": "assets/screenshots/section-03-leaver-no-groups.png",
+      "source_pdf_page": 25,
+      "figure": "7.30",
+      "source_caption": "No groups at all. A group-based review never sees this person, and Grafana still lets them in.",
+      "dimensions_px": [
+        950,
+        512
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Reviewed individually: fictional lab accounts and company.com/example.com addresses only; client IP, location and similar network fields already masked by the source author (e.g. <client-ip>, <your-location>); no passwords, tokens, private keys or session identifiers.",
+      "sha256": "96f798f9b1da41c2d2d85b9ebeabb6bb79475b0a90f2aebdaad9814edc6d3632"
+    },
+    {
+      "file": "assets/screenshots/section-04-model-created-events.png",
+      "source_pdf_page": 29,
+      "figure": "7.32",
+      "source_caption": "Filter to model_created events on groups, then click the arrow at the left of a row to expand it. These rows were made by akadmin.",
+      "dimensions_px": [
+        950,
+        561
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Reviewed individually: fictional lab accounts and company.com/example.com addresses only; client IP, location and similar network fields already masked by the source author (e.g. <client-ip>, <your-location>); no passwords, tokens, private keys or session identifiers.",
+      "sha256": "3b960aa1824c6f0dd8b695553b4a1f6b53a66bc3beba8230aef6830111a9fbcd"
+    },
+    {
+      "file": "assets/screenshots/section-04-model-created-detail.png",
+      "source_pdf_page": 29,
+      "figure": "7.33",
+      "source_caption": "The expanded event shows akadmin, the group, and a user agent of python-requests, which is how the Lab 1 dashboard's API calls look. A person at a browser shows a browser. On the open source version a change event shows that the group changed, not which member was added.",
+      "dimensions_px": [
+        950,
+        548
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Expanded event: request path, user agent python-requests and non-secret object identifiers. Client IP and geo/ASN fields already masked by the source author. No tokens.",
+      "sha256": "1b3abc695506ddf249c3dd4c45f026444c61052fb3754165068dc86f280ce931"
+    },
+    {
+      "file": "assets/screenshots/section-04-impersonation-events.png",
+      "source_pdf_page": 31,
+      "figure": "7.34",
+      "source_caption": "Impersonation events: one started and one ended, both by akadmin. If yours is empty, that is a clean result.",
+      "dimensions_px": [
+        950,
+        561
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Reviewed individually: fictional lab accounts and company.com/example.com addresses only; client IP, location and similar network fields already masked by the source author (e.g. <client-ip>, <your-location>); no passwords, tokens, private keys or session identifiers.",
+      "sha256": "638d82f3ce77b08f57e219e4ac7ae0d6365b5e9260ecbef451ed97499d81b83e"
+    },
+    {
+      "file": "assets/screenshots/section-04-impersonation-detail.png",
+      "source_pdf_page": 32,
+      "figure": "7.35",
+      "source_caption": "An expanded impersonation_started event. The reason the admin typed is recorded, here Lab 4 deny test, and the account impersonated shows as on_behalf_of. Read the reason and ask whether a ticket backs it. The user agent line is hidden.",
+      "dimensions_px": [
+        950,
+        760
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Expanded event; the source author hid the user agent and masked network fields. No credentials.",
+      "sha256": "70ea7822417d76ab787ea697b8c9433373a1c76644ba3ab71d0b335f2f4dfa91"
+    },
+    {
+      "file": "assets/screenshots/section-04-certificate-download.png",
+      "source_pdf_page": 33,
+      "figure": "7.36",
+      "source_caption": "Under System > Certificates, expand authentik Self-signed Certificate. Download Certificate is the button that logs a secret view.",
+      "dimensions_px": [
+        950,
+        495
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Certificate metadata and public fingerprints only (public information). The private key is not displayed. No redaction required.",
+      "sha256": "50a0b63a249b811f946bea7d40f8d53cdb2257d7924a73657e658090d9101003"
+    },
+    {
+      "file": "assets/screenshots/section-04-secret-view-events.png",
+      "source_pdf_page": 33,
+      "figure": "7.37",
+      "source_caption": "Your own secret_view for the certificate sits at the top. Other rows on this walk box are token views from later labs, so your list may be shorter.",
+      "dimensions_px": [
+        950,
+        371
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Event rows only; the viewed secrets themselves are not shown.",
+      "sha256": "ad5ca1360689585c351aff5800d6815482965325169ff78c1c3c9359e39baf4d"
+    },
+    {
+      "file": "assets/screenshots/section-04-password-set-events.png",
+      "source_pdf_page": 34,
+      "figure": "7.38",
+      "source_caption": "Password events from Lab 6. The user column is the account whose password changed, so match each one to a ticket.",
+      "dimensions_px": [
+        950,
+        470
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Event rows only; no password values are shown.",
+      "sha256": "8c5b7b0f78f9ecc14298ea4f92686a46b79e1e46151268b89b7fde41d9ee2168"
+    },
+    {
+      "file": "assets/screenshots/section-05-applications-without-flag.png",
+      "source_pdf_page": 36,
+      "figure": "7.41",
+      "source_caption": "Without the flag: the count says 2, but only Grafana comes back. WordPress is missing and nothing warns you.",
+      "dimensions_px": [
+        950,
+        218
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Application records; host shown as the source placeholder <your-lab-ip>. No client secrets.",
+      "sha256": "c35a95a1fd15028c2b5c8a4aa118d63a153af07fef49c1b92606888f1bbafdc6"
+    },
+    {
+      "file": "assets/screenshots/section-05-applications-with-flag.png",
+      "source_pdf_page": 36,
+      "figure": "7.42",
+      "source_caption": "With superuser_full_list=true: two records, Grafana and WordPress, for a count of 2. Count the records, never the count.",
+      "dimensions_px": [
+        950,
+        372
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Application records; host shown as the source placeholder <your-lab-ip>. No client secrets.",
+      "sha256": "73783962f8c341027cfbed4cec399157c55b6dab64e28b862d15198fc5006728"
+    },
+    {
+      "file": "assets/screenshots/evidence-users-export-pagination.png",
+      "source_pdf_page": 36,
+      "figure": "7.39",
+      "source_caption": "The users export as raw data. The pagination block at the top tells you how many records there are: count 15 here.",
+      "dimensions_px": [
+        950,
+        51
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "API response header; host shown as the source placeholder <your-lab-ip>. No tokens.",
+      "sha256": "9c0b7458e1b157011b0a0fb9fff4411f08709469c4c3f4ffb9ddf0dba1e93dc1"
+    },
+    {
+      "file": "assets/screenshots/evidence-events-export-pagination.png",
+      "source_pdf_page": 36,
+      "figure": "7.40",
+      "source_caption": "The events export stops at 100 records a page: count 180 and total_pages 2 here. When total_pages is more than 1, save the next page too.",
+      "dimensions_px": [
+        950,
+        51
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "API response header; host shown as the source placeholder <your-lab-ip>. No tokens.",
+      "sha256": "6a79308fef78788d6a09e90b424b69cb3aeb96d45e14b219adc31d24de8640cf"
+    },
+    {
+      "file": "assets/screenshots/evidence-export-logged-out.png",
+      "source_pdf_page": 40,
+      "figure": "7.43",
+      "source_caption": "This is what a logged-out export looks like. Log in to Authentik in another tab, then reload.",
+      "dimensions_px": [
+        950,
+        82
+      ],
+      "cropping": "None. Embedded image extracted at native resolution; aspect ratio preserved.",
+      "redaction": "None required.",
+      "sensitive_content_review": "Unauthenticated API error message. No credentials or session identifiers.",
+      "sha256": "4a0a927c5c57e08ab1a41b16b63771ec11f61b124e93ed9f423c6a3674a19ae9"
+    }
+  ],
+  "diagrams": [
+    {
+      "file": "assets/project-banner.png",
+      "type": "Banner",
+      "content": "Lab title with an HR / IdP / applications to review-evidence motif.",
+      "method": "Generated deterministically with Python/Pillow (no AI artwork).",
+      "sha256": "e4d4e469d6cea41298477d6e2f82ca64b0ca0ac9752e4cac374a9a0a19b776c9"
+    },
+    {
+      "file": "assets/architecture.png",
+      "type": "Architecture diagram (image export)",
+      "exported_from": "README.md, first mermaid block (the editable source)",
+      "method": "Rendered from the README Mermaid source with Mermaid 11.17.2 in headless Chrome at 2x scale (_build/export_diagrams.py).",
+      "sha256": "f8378a494ba3bfdb6c1df81b31e7755136e63d8707230a2b50d1afb903115f49"
+    },
+    {
+      "file": "assets/workflow.png",
+      "type": "Workflow diagram (image export)",
+      "exported_from": "README.md, second mermaid block (the editable source)",
+      "method": "Rendered from the README Mermaid source with Mermaid 11.17.2 in headless Chrome at 2x scale (_build/export_diagrams.py).",
+      "sha256": "49c7c5ae1cdf6fb596d8840c4b37a89b56c69f65612e302d80869d5c5d8eda54"
+    }
+  ],
+  "mermaid_diagrams": [
+    {
+      "location": "README.md, Architecture / Workflow section (first mermaid block)",
+      "type": "Architecture diagram",
+      "content": "OrangeHRM, Authentik, WordPress and Grafana; SSO access configuration, evidence read by the analyst, manual HR comparison, analyst review stages, proposed outputs, and remediation shown as separate.",
+      "method": "Mermaid flowchart written as text in README.md; rendered natively by GitHub and editable as text."
+    },
+    {
+      "location": "README.md, Architecture / Workflow section (second mermaid block)",
+      "type": "Workflow diagram",
+      "content": "Inventory, usage assessment, HR reconciliation, audit provenance, reasoned decisions and optional exports; review kept separate from remediation.",
+      "method": "Mermaid flowchart written as text in README.md; rendered natively by GitHub and editable as text."
+    }
+  ],
+  "excluded_figures": [
+    {
+      "figure": "7.1",
+      "source_pdf_page": 3,
+      "source_caption": "The Authentik admin interface, logged in as akadmin. Every count in this lab starts here.",
+      "reason": "Not used: Authentik admin landing page; no review evidence."
+    },
+    {
+      "figure": "7.4",
+      "source_pdf_page": 6,
+      "source_caption": "Directory > Groups lists every group the earlier labs created.",
+      "reason": "Not used: navigation to Directory > Groups; Figure 7.5 shows the result."
+    },
+    {
+      "figure": "7.6",
+      "source_pdf_page": 7,
+      "source_caption": "Applications > Applications is the list you will review against.",
+      "reason": "Not used: navigation to Applications; Figure 7.7 shows the result."
+    },
+    {
+      "figure": "7.8",
+      "source_pdf_page": 8,
+      "source_caption": "Open the Policy / Group / User Bindings tab on each application. This is where access is gated, or is not.",
+      "reason": "Not used: navigation to the bindings tab; Figures 7.9 and 7.10 show the result."
+    },
+    {
+      "figure": "7.15",
+      "source_pdf_page": 14,
+      "source_caption": "Events > Logs is your audit trail. Everything in Sections 02 and 04 comes from here.",
+      "reason": "Not used: navigation to Events > Logs."
+    },
+    {
+      "figure": "7.16",
+      "source_pdf_page": 15,
+      "source_caption": "The event log, newest first. Each row is one thing that happened, who did it and when.",
+      "reason": "Not used: unfiltered event log; the filtered views are more relevant."
+    },
+    {
+      "figure": "7.17",
+      "source_pdf_page": 16,
+      "source_caption": "Type action = \"login\" and press Enter. The filter does nothing until you press Enter.",
+      "reason": "Not used: typing the login filter; Figure 7.18 shows the result."
+    },
+    {
+      "figure": "7.19",
+      "source_pdf_page": 17,
+      "source_caption": "System > Settings is where the retention window lives. Check it before you trust an absence.",
+      "reason": "Not used: navigation to System > Settings; Figure 7.20 shows the result."
+    },
+    {
+      "figure": "7.24",
+      "source_pdf_page": 21,
+      "source_caption": "OrangeHRM is the HR source of truth. PIM holds the employee records.",
+      "reason": "Not used: navigation to OrangeHRM PIM; Figure 7.25 shows the result."
+    },
+    {
+      "figure": "7.26",
+      "source_pdf_page": 22,
+      "source_caption": "Set Include to Current and Past Employees. Employment Status is a different filter.",
+      "reason": "Not used: near-duplicate of Figure 7.27 (Include filter)."
+    },
+    {
+      "figure": "7.31",
+      "source_pdf_page": 28,
+      "source_caption": "Every create and change in Authentik, with the account that made it. This is where provenance comes from.",
+      "reason": "Not used: unfiltered model events; Figures 7.32 and 7.33 cover provenance."
+    }
+  ]
+}
